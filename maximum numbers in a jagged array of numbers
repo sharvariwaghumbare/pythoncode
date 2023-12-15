@@ -1,0 +1,17 @@
+def find_max(arr):
+    if isinstance(arr, int):
+        return arr
+    
+    max_num = float('-inf')
+    for elem in arr:
+        if isinstance(elem, list):
+            max_num = max(max_num, find_max(elem))
+        else:
+            max_num = max(max_num, elem)
+    
+    return max_num
+
+input_array = [2, 4, 10, [12, 4, [100, 99], 4], [3, 2, 99], 0]
+max_number = find_max(input_array)
+print("The maximum number in the array is:", max_number)
+ 
