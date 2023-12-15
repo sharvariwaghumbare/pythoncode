@@ -1,0 +1,39 @@
+import re
+
+class EmailValidator:
+    def __init__(self, email):
+        self.email = email
+
+    def validate_email(self):
+        # Regular expression for basic email validation
+        pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+        if re.match(pattern, self.email):
+            return True
+        else:
+            return False
+
+if __name__ == "__main__":
+    class_number = input("Enter the first number: ")
+    another_class_number = input("Enter the second number: ")
+
+    # Assuming you're providing an email address for validation
+    email_input = input("Enter your email address: ")
+
+    # Creating instances of the classes
+    # ...perform calculations or any operations on the numbers
+
+Q1
+
+def longest_word(input_string):
+    # Splitting the string into words
+    words = input_string.split()
+
+    # Finding the longest word
+    longest = max(words, key=len)
+    
+    return longest
+
+# Example usage
+input_string = "dummy test of the printing and typing industry"
+result = longest_word(input_string)
+print("The longest word is:", result)
