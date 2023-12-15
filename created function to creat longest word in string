@@ -1,0 +1,16 @@
+
+def longest_word(input_string):
+    
+    #string into word
+    
+    words = input_string.split()
+    
+    # found longest word 
+    
+    longest = max(words, key=len)
+    
+    return longest
+
+input_string = "dummy test of the printing and typesetting industry"
+result = longest_word(input_string)
+print("The longest word is:", result)
